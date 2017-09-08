@@ -1,201 +1,110 @@
 ﻿// Your code here!
 'use strict';
-
-class Animal{
-    constructor(voice) {
-        this.voice = voice || "waassep!"
-    };
-    speak() { console.log(this.voice) }; // not enumareble by default
+var keystrokes = '';
+var x = document.createElement("CANVAS");
+x.id = 'Canvas';
+var ctx = x.getContext("2d");
+//functions
+function showData(data) {
+    console.log(data[0].title);
+    document.getElementById("title").innerHTML = data[0].title;
+    document.getElementById("story").innerHTML = data[0].story;
 }
-class Cat extends Animal {
-    constructor(name, color) {
-        super('meow')
-        this.name = name;
-        this.color = color;
-    };
-    jump() { console.log("no way to laze") };
+//document.getElementById("test").innerHTML = "Page location is " + window.location.pathname;
+function setbackground(component, backgroundlocation) {
+    component.body.style.background = backgroundlocation;
+    component.body.style.backgroundPosition = 'center';
+    component.body.style.backgroundRepeat = 'no-repeat';
+    component.body.style.backgroundSize = 'cover';
 }
-var fluffy = new Cat('flufy', 'white');
-fluffy.jump();
-fluffy.speak();
-/*
-function Animal(voice) {
-this.voice = voice || 'wassup'
+function keyDownTextField(e) {
+    //var keyCode = e.keyCode;
+    console.log(e);
+    keystrokes += e.char;
+    if (e.keyCode == 13) { keystrokes = "";}
+    
 }
-Animal.prototype.speak = function () {
-    console.log(this.voice);
-}
-
-function cat(name, color) {
-    Animal.call(this, 'meow' );
-    this.name = name;
-    this.color = color;
-}
-cat.prototype = Object.create(Animal.prototype);
-cat.prototype.constructor = cat;
-var mugg = new cat('mugg', 'white');
-mugg.speak();
-console.log(mugg instanceof Animal);
-console.log(mugg instanceof cat);
-console.log(mugg.__proto__.__proto__);
-
-
-/*
-function cat(name, color) {
-    this.name = name;
-    this.color = color;
-}
-var mugg = new cat('mugg', 'white');
-var fluffy = new cat('fluffy', 'white');
-cat.prototype.age = 3;
-cat.prototype = { age: 5 };
-var snow = new cat('snow', 'white');
-//mugg.age = 5;
-console.log(mugg.age);
-console.log(fluffy.age);
-console.log(cat.prototype.age);
-console.log(snow.age);
-
-
-/* it first check functions then prototypes
-function cat(name, color) {
-    this.name = name;
-    this.color = color;
-}
-var mugg = new cat('mugg', 'white');
-var fluffy = new cat('fluffy', 'white');
-cat.prototype.age = 3;
-//mugg.age = 5;
-console.log(mugg.age);
-console.log(mugg.__proto__.age);
-console.log(Object.keys(mugg));
-console.log(mugg.hasOwnProperty('age'));
-
-/*
-function cat (name,color) {
-    this.name = name;
-    this.color = color;
-}
-cat.prototype.age = 3;
-
-var fluffy = new cat('fluffy', 'white');
-console.log(cat.prototype);
-console.log(cat.__prote__);
-console.log(cat.prototype === fluffy.__proto__);
-var mugg = new cat('mugg', 'white');
-
-/*
-var cat = { name: 'fluffy' };
-console.log(cat.__prote__);
-// object dont have prototypes but proto's
-/* prototype is a type that excist on every function in javascript
-var arr = ['red', 'blue', 'green']
-Object.defineProperty(Array.prototype, 'last', {
-    get: function () {
-        return this[this.length-1]
-    }});
-//var last = arr[arr.length - 1];
-var last = arr.last;
-console.log(last);
-
-/*
-var sound = " woef";
-var cat = {
-    name: {first:'fluffy',last:'hellrazor' },
-    color: 'white',
-    speak: function () { document.getElementById("test").innerHTML = sound; }
-    // ['Eye Color'] = 'yellow'
-}
-Object.defineProperty(cat, 'fullName',
-    {
-        get: function () {
-            return this.name.first + " " + this.name.last
-        },
-        set: function (value) {
-            var nameParts = value.split(' ')
-            this.name.first = nameParts[0]
-            this.name.last = nameParts[1]
-        }
-    });
-//var c = cat;
-cat.fullName = 'muffin wannabe'
-console.log(cat.fullName);
-console.log(cat.name.first);
-console.log(cat.name.last);
-console.log(" last thing" );
-
-
-/*
-var sound = " woef";
-var cat = {
-    name: 'fluffy',
-    color: 'white',
-    speak: function () { document.getElementById("test").innerHTML = sound; }
-    // ['Eye Color'] = 'yellow'
-}
-Object.defineProperty(cat, 'name', { configurable: false });
-/*
-var cat = {
-    name: 'fluffy',
-    color: 'white',
-    speak: function () { document.getElementById("test").innerHTML = sound; }
-    // ['Eye Color'] = 'yellow'
-}
-Object.defineProperty(cat, 'name', { enumerable: false }); 
-for (var propertyName in cat) {
-    console.log(propertyName + ' : ' + cat[propertyName]);
-}
-console.log(Object.keys(cat));
-console.log(JSON.stringify(cat));
-/*
-var cat = {
-    name: 'fluffy',
-    color: 'white',
-    speak: function () { document.getElementById("test").innerHTML = sound; }
-    // ['Eye Color'] = 'yellow'
-}
-Object.defineProperty(cat, 'name', { writable: false });
-cat.name = 'test';
-console.log(Object.getOwnPropertyDescriptor(cat,'name'));
-console.log(cat.name);
-/*
-var cat = {
-    name: 'fluffy',
-    color: 'white',
-    speak: function () { document.getElementById("test").innerHTML = sound; }
-   // ['Eye Color'] = 'yellow'
-}
-cat['Eye Color'] = 'yellow'
-console.log(cat['Eye Color']);
-/*
-class cat{ 
-    constructor(name, color) {
-    //name: 'fluffy',
-    this.color = 'white'
+function myClickHandler() {
+    var elem = document.getElementById('starwars');
+    if (elem != null) {  
+        elem.parentNode.removeChild(elem);  
     }
-    speak(){console.log('miauw');}
+    var ele = document.getElementById('Canvas');
+    if (ele == null) {
+        //x = document.createElement("CANVAS");
+        //x.id = 'Canvas';
+        document.body.appendChild(x);
+        //ctx = x.getContext("2d");
+    }
+
+    startGame();
+    //elem != null ? elem.parentNode.removeChild(elem) : "";
 }
-var t = new cat(' fluffly', 'white'); // 
-t.speak();
-document.getElementById("test").innerHTML = t.color;
+//this.document.
+//setbackground(this.document, "url('../images/space1.jpg')");
+flexData('story.json', showData);
+document.addEventListener("keydown", keyDownTextField, false);
+
+document.onclick = myClickHandler;
+
+function createStartScreen() {
+    
+}
+
+// create a canvas with 3 menu items able to go up and down
+function startGame() {
+    ctx.canvas.width = window.innerWidth;
+    ctx.canvas.height = window.innerHeight;
+    ctx.canvas.style.background = 'yellow';
+    ctx.font = "100px Arial";
+    ctx.fillText(keystrokes, 0, 100);
+
+    init();
+}
+//function myFunction() {
+//    setTimeout(function () { repeating(); }, 500);
+//}
+////myFunction();
+//function repeating() {
+//    ctx.beginPath();
+//    ctx.fillText(keystrokes, 0, 100);
+//    ctx.closePath();
+//    wordMove();
+//    myFunction();
+//}
 
 
+var step = 0, steps = 0, delay = 20;
+var wordss = ['words', 'test'];
+var wor = wordss[0];
+function showWords(words) {
+    x.height = x.height;
+    step= step + 5;
+    ctx.font = "100px Arial";
+    ctx.fillText(keystrokes, 0, 100);
+    //ctx.clearRect(0, 0, x.width, x.height);
+    ctx.save();
+    ctx.translate(x.width / 2, step);
+    ctx.fillText(wor, 2, 2);
+    ctx.restore();
+    if (step >= steps) {
+        step = 0;
+        wor == wordss[0] ? wor = wordss[1] : wor = wordss[0];
+    }
+    if (step <= steps) {
+        setTimeout('RunTextRightToLeft()', delay);
+      
+    }
+}
+//requestAnimationFrame(); 
+function init() {
+    ctx.fillStyle = "blue";
+    ctx.font = "20pt Verdana";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    step = 0;
+    steps = x.height + 50;
+    RunTextRightToLeft();
+    
+}
 
-/*
-function cat (name, color) {
-    //name: 'fluffy',
-    this.color= 'white'
-}
-var cat = new cat(' fluffly', 'white'); // 
-document.getElementById("test").innerHTML = cat.color;
-/*
-var sound = " woef" ;
-var cat = {
-    name: 'fluffy',
-    color: 'white',
-    //speak: function () { console.log(sound); }//document.getElementById("test").t; }
-    speak: function () { document.getElementById("test").innerHTML = sound; }
-}
-cat.age = 3;
-cat.speak();
-*/
