@@ -1,34 +1,51 @@
 ﻿// Your code here!
-'use strict';
-class word {
-    constructor(ctx,word,location,alive){
-        this.ctx = ctx;
-        this.words = word
+
+class Word {
+    constructor(word, letters, location) {
+        this.word = word;
+        this.letters = letters;
+
         //how to calculate score?
         this.location = location;
-        this.alive = alive;
+        this.alive = true;
+    }
+    GetWordElement() {
+        var g = document.createElement("P");
+        g.setAttribute("id", this.word);
+        var t = 0;
+        for (var i = 0; i < this.letters.length; i++) {
+            g.appendChild(this.letters[i].letterElement(this.word + t));
         }
+        //for (var i in this.letters) {
+        //    g.append(i.letterElement(this.word + t));
+        //    t++;
+        //}
+
+        return g;
+    }
+
 }
 
-Object.defineProperty(word, 'word',
+
+Object.defineProperty(Word, 'w',
     {
         get: function () {
-            return this.word;
+            return this.w;
         },
         set: function (value) {
-            this.word = value;
+            this.w = value;
         }
     });
-Object.defineProperty(word, 'location',
+Object.defineProperty(Word, 'location',
     {
         get: function () {
-            return this.location;
+            return this.location + "10";
         },
         set: function (value) {
             this.location = value;
         }
     });
-Object.defineProperty(word, 'alive',
+Object.defineProperty(Word, 'alive',
     {
         get: function () {
             return this.alive;
@@ -37,11 +54,22 @@ Object.defineProperty(word, 'alive',
             this.alive = value;
         }
     });
-Object.defineProperty(word, 'showWord',
+Object.defineProperty(Word, 'showWord',
     {
-        get: function () {
+        get: function (documentElement) {
             if (alive === true) {
-                
-            }
+
+                documentElement.createElement("p");
+                x.setAttribute("id", this.w);
+
+                for (var i in this.letters) {
+                    x.append(i.letterElement(Math.random()));
+                    g++;
+                }
+                return x;
+            } else { return false; }
+        },
+        set: function () {
+
         }
     });

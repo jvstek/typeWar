@@ -1,10 +1,18 @@
-﻿class letter {
+﻿class Letter {
     constructor(character, color) {
         this.character = character;
         this.color = color;
+        //this.letterElement;
     };
+    letterElement(name) {
+        var x = document.createElement("strong");
+        x.setAttribute("id", name);
+        x.style.color = this.color;
+        x.innerText = this.character;
+        return x;
+    }
 }
-Object.defineProperty(letter, 'character',
+Object.defineProperty(Letter, 'character',
     {
         get: function () {
             return this.character;
@@ -13,7 +21,7 @@ Object.defineProperty(letter, 'character',
             this.character = value;
         }
     });
-Object.defineProperty(letter, 'color',
+Object.defineProperty(Letter, 'color',
     {
         get: function () {
             return this.color;
@@ -22,3 +30,14 @@ Object.defineProperty(letter, 'color',
             this.color = value;
         }
     });
+Object.defineProperty(Letter, 'letterElement',
+    {
+        get: function (name) {
+            var x = document.createElement("strong");
+            x.setAttribute("id", name);
+            x.style.color = this.color;
+            x.innerText = this.character;
+            return x;
+        }
+    });
+

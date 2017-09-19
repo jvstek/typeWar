@@ -70,6 +70,12 @@
     <Content Include="images\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="images\StoreLogo.png" />
     <Content Include="images\Wide310x150Logo.scale-200.png" />
+    <Content Include="info\colorCode.json" />
+    <Content Include="info\easy.json" />
+    <Content Include="info\story.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="info\words.json" />
     <Content Include="js\level.js" />
     <Content Include="js\game.js" />
     <Content Include="js\loadData.js" />
@@ -77,13 +83,9 @@
     <Content Include="js\letter.js" />
     <Content Include="js\main.js" />
     <Content Include="css\default.css" />
-    <Content Include="story.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="BlankAppJavescript_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="info\" />
     <Folder Include="sound\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
