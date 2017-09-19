@@ -30,7 +30,11 @@ class Word {
         this.activeLetter++;
         this.activeLetter<this.word.length?this.letters[this.activeLetter].activeStyle():"";
     }
-    reset() { this.activeLetter = 0;}
+    reset() {
+        this.letters[this.activeLetter].basicStyle();
+        this.activeLetter = 0;
+        this.letters[this.activeLetter].activeStyle();
+    }
 }
 
 /*
