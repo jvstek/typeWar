@@ -1,310 +1,155 @@
-[
-{
-  "letters": {
-    [
-      "letter"
-      :
-      "q",
-      "color"
-      :
-      "#DC143C"
-    ],
-    [
-      "letter"
-      :
-      "a",
-      "color"
-      :
-      "#DC143C"
-    ],
-    [
-      "letter"
-      :
-      "z",
-      "color"
-      :
-      "#DC143C"
-    ],
-    [
-      "letter"
-      :
-      "w",
-      "color"
-      :
-      "#7FFF00"
-    ],
-    [
-      "letter"
-      :
-      "s",
-      "color"
-      :
-      "#7FFF00"
-    ],
-    [
-      "letter"
-      :
-      "x",
-      "color"
-      :
-      "#7FFF00"
-    ],
-    [
-      "letter"
-      :
-      "e",
-      "color"
-      :
-      "#DAA520"
-    ],
-    [
-      "letter"
-      :
-      "d",
-      "color"
-      :
-      "#DAA520"
-    ],
-    [
-      "letter"
-      :
-      "c",
-      "color"
-      :
-      "#DAA520"
-    ],
-    [
-      "letter"
-      :
-      "r",
-      "color"
-      :
-      "#0000FF"
-    ],
-    [
-      "letter"
-      :
-      "f",
-      "color"
-      :
-      "#0000FF"
-    ],
-    [
-      "letter"
-      :
-      "v",
-      "color"
-      :
-      "#0000FF"
-    ],
-    [
-      "letter"
-      :
-      "t",
-      "color"
-      :
-      "#0000FF"
-    ],
-    [
-      "letter"
-      :
-      "g",
-      "color"
-      :
-      "#0000FF"
-    ],
-    [
-      "letter"
-      :
-      "b",
-      "color"
-      :
-      "#0000FF"
-    ],
-    [
-      "letter"
-      :
-      "y",
-      "color"
-      :
-      "#FF1493"
-    ],
-    [
-      "letter"
-      :
-      "h",
-      "color"
-      :
-      "#FF1493"
-    ],
-    [
-      "letter"
-      :
-      "n",
-      "color"
-      :
-      "#FF1493"
-    ],
-    [
-      "letter"
-      :
-      "u",
-      "color"
-      :
-      "#2F4F4F"
-    ],
-    [
-      "letter"
-      :
-      "j",
-      "color"
-      :
-      "#2F4F4F"
-    ],
-    [
-      "letter"
-      :
-      "m",
-      "color"
-      :
-      "#2F4F4F"
-    ],
-    [
-      "letter"
-      :
-      "i",
-      "color"
-      :
-      "#E0FFFF"
-    ],
-    [
-      "letter"
-      :
-      "k",
-      "color"
-      :
-      "#E0FFFF"
-    ],
-    [
-      "letter"
-      :
-      ",",
-      "color"
-      :
-      "#E0FFFF"
-    ],
-    [
-      "letter"
-      :
-      "o",
-      "color"
-      :
-      "#20B2AA"
-    ],
-    [
-      "letter"
-      :
-      "l",
-      "color"
-      :
-      "#20B2AA"
-    ],
-    [
-      "letter"
-      :
-      ".",
-      "color"
-      :
-      "#20B2AA"
-    ],
-    [
-      "letter"
-      :
-      "1",
-      "color"
-      :
-      "red"
-    ],
-    [
-      "letter"
-      :
-      "2",
-      "color"
-      :
-      "red"
-    ],
-    [
-      "letter"
-      :
-      "3",
-      "color"
-      :
-      "red"
-    ],
-    [
-      "letter"
-      :
-      "4",
-      "color"
-      :
-      "red"
-    ],
-    [
-      "letter"
-      :
-      "5",
-      "color"
-      :
-      "red"
-    ],
-    [
-      "letter"
-      :
-      "6",
-      "color"
-      :
-      "red"
-    ],
-    [
-      "letter"
-      :
-      "7",
-      "color"
-      :
-      "red"
-    ],
-    [
-      "letter"
-      :
-      "8",
-      "color"
-      :
-      "red"
-    ],
-    [
-      "letter"
-      :
-      "9",
-      "color"
-      :
-      "#E0FFFF"
-    ],
-    [
-      "letter"
-      :
-      "0",
-      "color"
-      :
-      "20B2AA"
-    ],
-    [
-      "letter"
-      :
-      " ",
-      "color"
-      :
-      "FFFAFA"
-    ],
-  }
-}
-]
+[{
+	"letters": [{
+			"letter": "q",
+			"color": "#DC143C"
+		},
+		{
+			"letter": "a",
+			"color": "#DC143C"
+		},
+		{
+			"letter": "z",
+			"color": "#DC143C"
+		},
+		{
+			"letter": "w",
+			"color": "#7FFF00"
+		},
+		{
+			"letter": "s",
+			"color": "#7FFF00"
+		},
+		{
+			"letter": "x",
+			"color": "#7FFF00"
+		},
+		{
+			"letter": "e",
+			"color": "#DAA520"
+		},
+		{
+			"letter": "d",
+			"color": "#DAA520"
+		},
+		{
+			"letter": "c",
+			"color": "#DAA520"
+		},
+		{
+			"letter": "r",
+			"color": "#0000FF"
+		},
+		{
+			"letter": "f",
+			"color": "#0000FF"
+		},
+		{
+			"letter": "v",
+			"color": "#0000FF"
+		},
+		{
+			"letter": "t",
+			"color": "#0000FF"
+		},
+		{
+			"letter": "g",
+			"color": "#0000FF"
+		},
+		{
+			"letter": "b",
+			"color": "#0000FF"
+		},
+		{
+			"letter": "y",
+			"color": "#FF1493"
+		},
+		{
+			"letter": "h",
+			"color": "#FF1493"
+		},
+		{
+			"letter": "n",
+			"color": "#FF1493"
+		},
+		{
+			"letter": "u",
+			"color": "#2F4F4F"
+		},
+		{
+			"letter": "j",
+			"color": "#2F4F4F"
+		},
+		{
+			"letter": "m",
+			"color": "#2F4F4F"
+		},
+		{
+			"letter": "i",
+			"color": "#E0FFFF"
+		},
+		{
+			"letter": "k",
+			"color": "#E0FFFF"
+		},
+		{
+			"letter": ",",
+			"color": "#E0FFFF"
+		},
+		{
+			"letter": "o",
+			"color": "#20B2AA"
+		},
+		{
+			"letter": "l",
+			"color": "#20B2AA"
+		},
+		{
+			"letter": ".",
+			"color": "#20B2AA"
+		},
+		{
+			"letter": "1",
+			"color": "red"
+		},
+		{
+			"letter": "2",
+			"color": "red"
+		},
+		{
+			"letter": "3",
+			"color": "red"
+		},
+		{
+			"letter": "4",
+			"color": "red"
+		},
+		{
+			"letter": "5",
+			"color": "red"
+		},
+		{
+			"letter": "6",
+			"color": "red"
+		},
+		{
+			"letter": "7",
+			"color": "red"
+		},
+		{
+			"letter": "8",
+			"color": "red"
+		},
+		{
+			"letter": "9",
+			"color": "#E0FFFF"
+		},
+		{
+			"letter": "0",
+			"color": "20B2AA"
+		},
+		{
+			"letter": " ",
+			"color": "FFFAFA"
+		}
+	]
+}]

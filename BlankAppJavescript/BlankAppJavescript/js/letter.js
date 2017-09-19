@@ -1,17 +1,33 @@
 ﻿class Letter {
-    constructor(character, color) {
+    
+    constructor(character, color,el) {
         this.character = character;
         this.color = color;
+        this.el = el;
         //this.letterElement;
     };
     letterElement(name) {
-        var x = document.createElement("strong");
-        x.setAttribute("id", name);
-        x.style.color = this.color;
-        x.innerText = this.character;
-        return x;
+        
+        this.el = document.createElement("strong");
+        this.el.setAttribute("id", name);
+        
+        this.el.innerText = this.character;
+        this.basicStyle();
+        return this.el;
     }
-}
+    activeStyle() {
+       // this.character = this.character.fontsize(50);d
+        this.el.style.font = "bold 300px Comic Sans MS";
+        //this.el.style.color = "black";
+       // this.el.fontSize = 20;
+       // this.color = "black";
+    }
+    basicStyle() {
+        this.el.style.color = this.color;
+        this.el.style.font = "bold 40px Comic Sans MS";
+    }
+
+}/*
 Object.defineProperty(Letter, 'character',
     {
         get: function () {
@@ -41,3 +57,4 @@ Object.defineProperty(Letter, 'letterElement',
         }
     });
 
+    */

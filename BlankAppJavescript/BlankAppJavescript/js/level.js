@@ -7,6 +7,7 @@ class level {
         this.speed = speed;
     };
 }
+/*
 Object.defineProperty(level, 'words',
     {
         get: function () {
@@ -33,4 +34,4 @@ Object.defineProperty(level, 'speed',
         set: function (value) {
             this.speed = value;
         }
-    });
+    });*/
